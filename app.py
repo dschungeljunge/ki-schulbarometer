@@ -10,6 +10,7 @@ app = Flask(__name__)
 
 # SQLAlchemy konfigurieren (Datenbankverbindung)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///datenbank.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dschungeljunge:PHhsluuni8102@junction.proxy.rlwy.net:33275/junction.proxy.rlwy.net'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
