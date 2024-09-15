@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragebogen</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1>Fragebogen zu Künstlicher Intelligenz</h1>
+    
+    <form action="/test" method="POST">
+        <!-- Persönliche Informationen -->
+        <h2>Persönliche Informationen</h2>
+        <label for="alter">Alter:</label>
+        <input type="number" name="alter" required><br><br>
+
+        <label for="berufserfahrung">Berufserfahrung (Jahre):</label>
+        <input type="number" name="berufserfahrung" required><br><br>
+
+        <label for="geschlecht">Geschlecht:</label>
+        <input type="text" name="geschlecht" required><br><br>
+
+        <label for="schulstufe">Schulstufe:</label>
+        <input type="text" name="schulstufe" required><br><br>
+
+        <label for="funktionen">Funktionen:</label>
+        <input type="text" name="funktionen" required><br><br>
+
+        <h2>Positive Fragen</h2>
+        
+        <!-- Frage 1 -->
+        <label for="pos1">1. For routine transactions, I would rather interact with an artificially intelligent system than with a human.</label><br>
+        <input type="radio" name="pos1" value="1"> 1
+        <input type="radio" name="pos1" value="2"> 2
+        <input type="radio" name="pos1" value="3"> 3
+        <input type="radio" name="pos1" value="4"> 4
+        <input type="radio" name="pos1" value="5"> 5
+        <br><br>
+
+        <!-- Frage 2 -->
+        <label for="pos2">2. Artificial Intelligence can provide new economic opportunities for this country.</label><br>
+        <input type="radio" name="pos2" value="1"> 1
+        <input type="radio" name="pos2" value="2"> 2
+        <input type="radio" name="pos2" value="3"> 3
+        <input type="radio" name="pos2" value="4"> 4
+        <input type="radio" name="pos2" value="5"> 5
+        <br><br>
+
+        <h2>Negative Fragen</h2>
+
+        <!-- Frage 3 -->
+        <label for="neg3">3. Organisations use Artificial Intelligence unethically.</label><br>
+        <input type="radio" name="neg3" value="1"> 1
+        <input type="radio" name="neg3" value="2"> 2
+        <input type="radio" name="neg3" value="3"> 3
+        <input type="radio" name="neg3" value="4"> 4
+        <input type="radio" name="neg3" value="5"> 5
+        <br><br>
+
+        <!-- Frage 6 -->
+        <label for="neg6">4. I think artificially intelligent systems make many errors.</label><br>
+        <input type="radio" name="neg6" value="1"> 1
+        <input type="radio" name="neg6" value="2"> 2
+        <input type="radio" name="neg6" value="3"> 3
+        <input type="radio" name="neg6" value="4"> 4
+        <input type="radio" name="neg6" value="5"> 5
+        <br><br>
+
+        <!-- Absenden des Formulars -->
+        <button type="submit">Fragebogen absenden</button>
+    </form>
+</body>
+</html>

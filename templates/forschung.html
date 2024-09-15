@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forschungsergebnisse</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <h1>Forschungsergebnisse</h1>
+
+    <h2>Mittelwerte der Antworten</h2>
+    <ul>
+        {% for frage, wert in statistiken.items() %}
+            <li>{{ frage }}: {{ wert }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
