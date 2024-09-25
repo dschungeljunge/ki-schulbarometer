@@ -50,16 +50,28 @@ def test():
         schulstufe = request.form.get('schulstufe')
         funktionen = request.form.get('funktionen')
 
-        # Fragebogen-Antworten
-        antworten = {
-            'pos1': request.form.get('pos1'),
-            'pos2': request.form.get('pos2'),
-            'neg3': request.form.get('neg3'),
-            'neg6': request.form.get('neg6')
-        }
-
-        # Antworten werden als JSON gespeichert
-        antworten_json = json.dumps(antworten)
+        # Fragebogen-Antworten werden direkt gespeichert
+        frage1 = int(request.form.get('frage1'))
+        frage2 = int(request.form.get('frage2'))
+        frage3 = int(request.form.get('frage3'))
+        frage4 = int(request.form.get('frage4'))
+        frage5 = int(request.form.get('frage5'))
+        frage6 = int(request.form.get('frage6'))
+        frage7 = int(request.form.get('frage7'))
+        frage8 = int(request.form.get('frage8'))
+        frage9 = int(request.form.get('frage9'))
+        frage10 = int(request.form.get('frage10'))
+        frage11 = int(request.form.get('frage11'))
+        frage12 = int(request.form.get('frage12'))
+        frage13 = int(request.form.get('frage13'))
+        frage14 = int(request.form.get('frage14'))
+        frage15 = int(request.form.get('frage15'))
+        frage16 = int(request.form.get('frage16'))
+        frage17 = int(request.form.get('frage17'))
+        frage18 = int(request.form.get('frage18'))
+        frage19 = int(request.form.get('frage19'))
+        frage20 = int(request.form.get('frage20'))
+        frage21 = int(request.form.get('frage21'))
 
         # Neuen Teilnehmer in die Datenbank einfügen
         teilnehmer = Teilnehmer(
@@ -68,7 +80,11 @@ def test():
             geschlecht=geschlecht,
             schulstufe=schulstufe,
             funktionen=funktionen,
-            antworten=antworten_json  # Speichert die Antworten als JSON
+            frage1=frage1, frage2=frage2, frage3=frage3, frage4=frage4, frage5=frage5,
+            frage6=frage6, frage7=frage7, frage8=frage8, frage9=frage9, frage10=frage10,
+            frage11=frage11, frage12=frage12, frage13=frage13, frage14=frage14, frage15=frage15,
+            frage16=frage16, frage17=frage17, frage18=frage18, frage19=frage19, frage20=frage20,
+            frage21=frage21
         )
         db.session.add(teilnehmer)
         db.session.commit()
@@ -78,6 +94,7 @@ def test():
 
     # GET-Request: Das Formular anzeigen
     return render_template('test.html')
+
 
 @app.route('/ergebnis')
 def ergebnis():

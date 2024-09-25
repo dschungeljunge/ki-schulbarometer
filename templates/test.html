@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fragebogen</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-
 </head>
 <body>
     <h1>Fragebogen zu Künstlicher Intelligenz</h1>
@@ -28,44 +27,196 @@
         <label for="funktionen">Funktionen:</label>
         <input type="text" name="funktionen" required><br><br>
 
-        <h2>Positive Fragen</h2>
-        
+        <!-- Einstellungsfragen zu KI -->
+        <h2>Fragen zur Einstellung gegenüber Künstlicher Intelligenz</h2>
+
         <!-- Frage 1 -->
-        <label for="pos1">1. For routine transactions, I would rather interact with an artificially intelligent system than with a human.</label><br>
-        <input type="radio" name="pos1" value="1"> 1
-        <input type="radio" name="pos1" value="2"> 2
-        <input type="radio" name="pos1" value="3"> 3
-        <input type="radio" name="pos1" value="4"> 4
-        <input type="radio" name="pos1" value="5"> 5
+        <label for="frage1">1. Routinemäßigen Aufgaben in meinem Lehrberuf würde ich gerne einer künstlichen Intelligenz übergeben.</label><br>
+        <input type="radio" name="frage1" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage1" value="2"> Stimme nicht zu
+        <input type="radio" name="frage1" value="3"> Weder noch
+        <input type="radio" name="frage1" value="4"> Stimme zu
+        <input type="radio" name="frage1" value="5"> Stimme vollkommen zu
         <br><br>
 
         <!-- Frage 2 -->
-        <label for="pos2">2. Artificial Intelligence can provide new economic opportunities for this country.</label><br>
-        <input type="radio" name="pos2" value="1"> 1
-        <input type="radio" name="pos2" value="2"> 2
-        <input type="radio" name="pos2" value="3"> 3
-        <input type="radio" name="pos2" value="4"> 4
-        <input type="radio" name="pos2" value="5"> 5
+        <label for="frage2">2. Künstliche Intelligenz kann dem Bildungssystem neue Chancen für besseren Unterricht bieten.</label><br>
+        <input type="radio" name="frage2" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage2" value="2"> Stimme nicht zu
+        <input type="radio" name="frage2" value="3"> Weder noch
+        <input type="radio" name="frage2" value="4"> Stimme zu
+        <input type="radio" name="frage2" value="5"> Stimme vollkommen zu
         <br><br>
 
-        <h2>Negative Fragen</h2>
-
         <!-- Frage 3 -->
-        <label for="neg3">3. Organisations use Artificial Intelligence unethically.</label><br>
-        <input type="radio" name="neg3" value="1"> 1
-        <input type="radio" name="neg3" value="2"> 2
-        <input type="radio" name="neg3" value="3"> 3
-        <input type="radio" name="neg3" value="4"> 4
-        <input type="radio" name="neg3" value="5"> 5
+        <label for="frage3">3. Bildungseinrichtungen nutzen Künstliche Intelligenz unethisch.</label><br>
+        <input type="radio" name="frage3" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage3" value="2"> Stimme nicht zu
+        <input type="radio" name="frage3" value="3"> Weder noch
+        <input type="radio" name="frage3" value="4"> Stimme zu
+        <input type="radio" name="frage3" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 4 -->
+        <label for="frage4">4. Künstlich intelligente Systeme können meinen Schüler:innen helfen, sich glücklicher zu fühlen.</label><br>
+        <input type="radio" name="frage4" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage4" value="2"> Stimme nicht zu
+        <input type="radio" name="frage4" value="3"> Weder noch
+        <input type="radio" name="frage4" value="4"> Stimme zu
+        <input type="radio" name="frage4" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 5 -->
+        <label for="frage5">5. Ich bin beeindruckt von dem, was Künstliche Intelligenz im Unterricht leisten kann.</label><br>
+        <input type="radio" name="frage5" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage5" value="2"> Stimme nicht zu
+        <input type="radio" name="frage5" value="3"> Weder noch
+        <input type="radio" name="frage5" value="4"> Stimme zu
+        <input type="radio" name="frage5" value="5"> Stimme vollkommen zu
         <br><br>
 
         <!-- Frage 6 -->
-        <label for="neg6">4. I think artificially intelligent systems make many errors.</label><br>
-        <input type="radio" name="neg6" value="1"> 1
-        <input type="radio" name="neg6" value="2"> 2
-        <input type="radio" name="neg6" value="3"> 3
-        <input type="radio" name="neg6" value="4"> 4
-        <input type="radio" name="neg6" value="5"> 5
+        <label for="frage6">6. Ich denke, dass künstlich intelligente Systeme viele Fehler machen.</label><br>
+        <input type="radio" name="frage6" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage6" value="2"> Stimme nicht zu
+        <input type="radio" name="frage6" value="3"> Weder noch
+        <input type="radio" name="frage6" value="4"> Stimme zu
+        <input type="radio" name="frage6" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 7 -->
+        <label for="frage7">7. Ich bin daran interessiert, künstlich intelligente Systeme in meinem täglichen Unterricht zu nutzen.</label><br>
+        <input type="radio" name="frage7" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage7" value="2"> Stimme nicht zu
+        <input type="radio" name="frage7" value="3"> Weder noch
+        <input type="radio" name="frage7" value="4"> Stimme zu
+        <input type="radio" name="frage7" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 8 -->
+        <label for="frage8">8. Ich finde Künstliche Intelligenz im Bildungsbereich unheimlich.</label><br>
+        <input type="radio" name="frage8" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage8" value="2"> Stimme nicht zu
+        <input type="radio" name="frage8" value="3"> Weder noch
+        <input type="radio" name="frage8" value="4"> Stimme zu
+        <input type="radio" name="frage8" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 9 -->
+        <label for="frage9">9. Künstliche Intelligenz könnte die Kontrolle über die Lernprozesse meiner Schüler:innen übernehmen.</label><br>
+        <input type="radio" name="frage9" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage9" value="2"> Stimme nicht zu
+        <input type="radio" name="frage9" value="3"> Weder noch
+        <input type="radio" name="frage9" value="4"> Stimme zu
+        <input type="radio" name="frage9" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 10 -->
+        <label for="frage10">10. Ich denke, Künstliche Intelligenz ist gefährlich für das Bildungssystem.</label><br>
+        <input type="radio" name="frage10" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage10" value="2"> Stimme nicht zu
+        <input type="radio" name="frage10" value="3"> Weder noch
+        <input type="radio" name="frage10" value="4"> Stimme zu
+        <input type="radio" name="frage10" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 11 -->
+        <label for="frage11">11. Künstliche Intelligenz kann positive Auswirkungen auf das Lernen meiner Schüler:innen haben.</label><br>
+        <input type="radio" name="frage11" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage11" value="2"> Stimme nicht zu
+        <input type="radio" name="frage11" value="3"> Weder noch
+        <input type="radio" name="frage11" value="4"> Stimme zu
+        <input type="radio" name="frage11" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 12 -->
+        <label for="frage12">12. Künstliche Intelligenz im Unterricht ist aufregend.</label><br>
+        <input type="radio" name="frage12" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage12" value="2"> Stimme nicht zu
+        <input type="radio" name="frage12" value="3"> Weder noch
+        <input type="radio" name="frage12" value="4"> Stimme zu
+        <input type="radio" name="frage12" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 13 -->
+        <label for="frage13">13. Ich wäre dankbar, wenn Sie „Stimme vollkommen zu“ auswählen könnten.</label><br>
+        <input type="radio" name="frage13" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage13" value="2"> Stimme nicht zu
+        <input type="radio" name="frage13" value="3"> Weder noch
+        <input type="radio" name="frage13" value="4"> Stimme zu
+        <input type="radio" name="frage13" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 14 -->
+        <label for="frage14">14. Eine künstliche Intelligenz wäre in vielen Routineaufgaben des Unterrichts besser als eine Lehrperson.</label><br>
+        <input type="radio" name="frage14" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage14" value="2"> Stimme nicht zu
+        <input type="radio" name="frage14" value="3"> Weder noch
+        <input type="radio" name="frage14" value="4"> Stimme zu
+        <input type="radio" name="frage14" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 15 -->
+        <label for="frage15">15. Es gibt viele vorteilhafte Anwendungen der Künstlichen Intelligenz im Bildungswesen.</label><br>
+        <input type="radio" name="frage15" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage15" value="2"> Stimme nicht zu
+        <input type="radio" name="frage15" value="3"> Weder noch
+        <input type="radio" name="frage15" value="4"> Stimme zu
+        <input type="radio" name="frage15" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 16 -->
+        <label for="frage16">16. Es läuft mir kalt den Rücken herunter, wenn ich an zukünftige Anwendungen von Künstlicher Intelligenz im Unterricht denke.</label><br>
+        <input type="radio" name="frage16" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage16" value="2"> Stimme nicht zu
+        <input type="radio" name="frage16" value="3"> Weder noch
+        <input type="radio" name="frage16" value="4"> Stimme zu
+        <input type="radio" name="frage16" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 17 -->
+        <label for="frage17">17. Künstlich intelligente Systeme können in manchen Bereichen des Unterrichts besser als Lehrpersonen arbeiten.</label><br>
+        <input type="radio" name="frage17" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage17" value="2"> Stimme nicht zu
+        <input type="radio" name="frage17" value="3"> Weder noch
+        <input type="radio" name="frage17" value="4"> Stimme zu
+        <input type="radio" name="frage17" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 18 -->
+        <label for="frage18">18. Ein Großteil der Schüler:innen wird von einer Zukunft voller Künstlicher Intelligenz im Bildungsbereich profitieren.</label><br>
+        <input type="radio" name="frage18" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage18" value="2"> Stimme nicht zu
+        <input type="radio" name="frage18" value="3"> Weder noch
+        <input type="radio" name="frage18" value="4"> Stimme zu
+        <input type="radio" name="frage18" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 19 -->
+        <label for="frage19">19. Ich würde gerne Künstliche Intelligenz in meinem eigenen Unterricht einsetzen.</label><br>
+        <input type="radio" name="frage19" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage19" value="2"> Stimme nicht zu
+        <input type="radio" name="frage19" value="3"> Weder noch
+        <input type="radio" name="frage19" value="4"> Stimme zu
+        <input type="radio" name="frage19" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 20 -->
+        <label for="frage20">20. Lehrpersonen wie ich werden leiden, wenn Künstliche Intelligenz immer mehr im Bildungswesen genutzt wird.</label><br>
+        <input type="radio" name="frage20" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage20" value="2"> Stimme nicht zu
+        <input type="radio" name="frage20" value="3"> Weder noch
+        <input type="radio" name="frage20" value="4"> Stimme zu
+        <input type="radio" name="frage20" value="5"> Stimme vollkommen zu
+        <br><br>
+
+        <!-- Frage 21 -->
+        <label for="frage21">21. Künstliche Intelligenz wird genutzt, um Schüler:innen auszuspionieren.</label><br>
+        <input type="radio" name="frage21" value="1"> Stimme überhaupt nicht zu
+        <input type="radio" name="frage21" value="2"> Stimme nicht zu
+        <input type="radio" name="frage21" value="3"> Weder noch
+        <input type="radio" name="frage21" value="4"> Stimme zu
+        <input type="radio" name="frage21" value="5"> Stimme vollkommen zu
         <br><br>
 
         <!-- Absenden des Formulars -->
