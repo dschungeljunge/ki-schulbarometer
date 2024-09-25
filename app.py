@@ -1,19 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for
-from database import db  # db aus database.py importieren
+from flask_migrate import Migrate
+from database import db
 from models import Teilnehmer
-import json  # Für die Konvertierung von Antworten
+import json
 import pandas as pd
 import numpy as np
 
-# Flask-App erstellen
 app = Flask(__name__)
 
-# SQLAlchemy konfigurieren (Datenbankverbindung)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///datenbank.db'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:UWvqnlkEuSYaxUrWPDWMHjneHzYAxBOF@postgres.railway.internal:5432/railway'
-
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 db.init_app(app)
+migrate = Migrate(app, db)
 
 # Funktionen für Datenanalyse und Statistiken
 def hole_daten():

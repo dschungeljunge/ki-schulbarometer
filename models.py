@@ -8,7 +8,7 @@ class Teilnehmer(db.Model):
     schulstufe = db.Column(db.String(50))
     funktionen = db.Column(db.String(100))
 
-    # Neue Spalten für jede der 21 Fragen
+    # Spalten für alle 21 Fragen
     frage1 = db.Column(db.Integer)
     frage2 = db.Column(db.Integer)
     frage3 = db.Column(db.Integer)
